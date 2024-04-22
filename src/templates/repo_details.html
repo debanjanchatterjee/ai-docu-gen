@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repository Details</title>
+</head>
+<body>
+    <h1>Repository Details</h1>
+    <p><strong>Repository Name:</strong> {{ repo.name }}</p>
+    <p><strong>Owner:</strong> {{ repo.metadata.owner }}</p>
+    <p><strong>Description:</strong> {{ repo.metadata.description }}</p>
+
+    <h2>File Structure:</h2>
+    <ul>
+        {% for file in repo.files %}
+        <li>{{ file }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
